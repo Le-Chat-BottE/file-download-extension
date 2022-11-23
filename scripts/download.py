@@ -13,7 +13,7 @@ def zip_folder(folder_path):
 
 def zip_file(zip_path):
     file_flag = os.path.exists(zip_path)
-    if zip_path is True:
+    if  file_flag is True:
         return zip_path
     else:
         return
