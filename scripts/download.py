@@ -1,6 +1,7 @@
 import gradio as gr
 import os
 import shutil
+from modules import script_callbacks
 
 def zip_folder(folder_path):
     folder_flag = os.path.exists(folder_path)
