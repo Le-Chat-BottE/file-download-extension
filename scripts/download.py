@@ -14,9 +14,9 @@ def zip_folder(folder_path):
 def zip_file(zip_path):
     file_flag = os.path.exists(zip_path)
     if zip_path is True:
-        return True
+        return zip_path
     else:
-        return False
+        return
 
 def on_ui_tabs():
     with gr.Blocks() as download:
@@ -32,7 +32,7 @@ def on_ui_tabs():
             output = gr.File(label='Zip')
             download_btn = gr.Button("Check")
             file_flag = False
-            # download_btn.click(fn=zip_file, inputs=folder_path, outputs=file_flag)
+            download_btn.click(fn=zip_file, inputs=folder_path, outputs=file_flag)
 
     return (download, "Zip and Download", "download")
 
