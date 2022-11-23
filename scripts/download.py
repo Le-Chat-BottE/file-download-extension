@@ -31,8 +31,7 @@ def on_ui_tabs():
             file_path = gr.Textbox(label="File")
             output = gr.File(label='Zip')
             download_btn = gr.Button("Check")
-            file_flag = False
-            download_btn.click(fn=zip_file, inputs=folder_path, outputs=output)
+            download_btn.click(fn=zip_file, inputs=file_path, outputs=output)
 
     return (download, "Zip and Download", "download"),
 
