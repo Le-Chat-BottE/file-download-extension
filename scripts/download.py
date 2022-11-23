@@ -34,7 +34,7 @@ def on_ui_tabs():
             file_flag = False
             download_btn.click(fn=zip_file, inputs=folder_path, outputs=output)
 
-    return (download, "Zip and Download", "download")
+    return (download, "Zip and Download", "download"),
 
 
 script_callbacks.on_ui_tabs(on_ui_tabs)
